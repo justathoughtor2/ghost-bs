@@ -5,7 +5,7 @@
     <div class="page-header" id="blog-header">
       <h1>{{@blog.title}} <small>{{@blog.description}}</small></h1>
       {{#if @blog.cover}}
-        
+        {{blog-header-bg @blog.cover}}
       {{/if}}
     </div>
   </div>
