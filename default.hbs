@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{@blog.title}}</title>
+  
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
+  
+  {{ghost_head}}
+</head>
+
+<body>
+  <div class="container-fluid" id="main-content">
+    {{if @blog.navigation}}
+      <div class="row" id="main-nav">
+        <div class="col-md-12">
+          <nav class="navbar navbar-default">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <i class="fa fa-lg fa-bars"></i>
+              </button>
+              <a class="navbar-brand" href="/">
+                {{#if @blog.logo}}
+                  <img src="{{@blog.logo}}" alt="{{@blog.title}}" />
+                {{@blog.title}}
+              </a>
+            </div>
+            
+            <div class="collapse navbar-collapse">
+              {{@blog.navigation}}
+            </div>
+          </nav>
+        </div>
+      </div>
+    {{/if}}
+    
+    {{{body}}}
+  </div>
+  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  
+  {{ghost_foot}}
+</body>
+</html>
