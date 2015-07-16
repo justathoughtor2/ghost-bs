@@ -1,7 +1,17 @@
+body {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
 #main-nav {
   position: fixed;
   width: 100%;
   margin-top: 10px;
   margin-bottom: 10px;
   z-index: 10;
+}
+
+#main-body {
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
