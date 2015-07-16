@@ -1,23 +1,45 @@
 <div class="row">
   {{#foreach posts}}
-    <div class="col-md-6 col-sm-12">
-      <div class="row">
-        <div class="col-md-12">
-          <h2><a href="{{url}}">{{title}}</a></h2>
+    {{#if featured}}
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-12">
+            <h2><a href="{{url}}">{{title}}</a></h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            {{excerpt words="24"}}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            {{author}}
+            {{tags prefix=" on "}}
+            <time class="post-date" datetime="{{date timeago="true"}}">{{date timeago="true"}}</time>
+          </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-12">
-          {{excerpt words="24"}}
+    {{else}}
+      <div class="col-md-6 col-sm-12">
+        <div class="row">
+          <div class="col-md-12">
+            <h2><a href="{{url}}">{{title}}</a></h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            {{excerpt words="24"}}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            {{author}}
+            {{tags prefix=" on "}}
+            <time class="post-date" datetime="{{date timeago="true"}}">{{date timeago="true"}}</time>
+          </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-12">
-          {{author}}
-          {{tags prefix=" on "}}
-          <time class="post-date" datetime="{{date timeago="true"}}">{{date timeago="true"}}</time>
-        </div>
-      </div>
-    </div>
+    {{/if}}
   {{/foreach}}
 </div>
