@@ -1,7 +1,11 @@
 <div class="row">
   {{#foreach posts}}
     {{#if featured}}
-      <div class="col-md-12 post-loop">
+      {{#if image}}
+        <div class="col-md-12 post-loop">
+      {{else}}
+        <div class="col-md-12 post-loop" style="background-color: #000000">
+      {{/if}}
         <div class="post-loop-inner">
           <div class="row">
             <div class="col-md-12">
@@ -21,12 +25,13 @@
             </div>
           </div>
         </div>
-        {{#if image}}
-          {{post-loop-bg image @index}}
-        {{/if}}
       </div>
     {{else}}
-      <div class="col-md-6 col-sm-12 post-loop">
+      {{#if image}}
+        <div class="col-md-4 col-sm-6 col-xs-12 post-loop">
+      {{else}}
+        <div class="col-md-4 col-sm-6 col-xs-12 post-loop" style="background-color: #000000">
+      {{/if}}
         <div class="post-loop-inner">
           <div class="row">
             <div class="col-md-12">
@@ -46,9 +51,6 @@
             </div>
           </div>
         </div>
-        {{#if image}}
-          {{post-loop-bg image @index}}
-        {{/if}}
       </div>
     {{/if}}
   {{/foreach}}
