@@ -8,16 +8,20 @@
       {{else}}
         <div class="page-header">
       {{/if}}
-        <h1>{{title}}</h1>
-        {{author}}
-        {{tags prefix=" on "}}
-        <time class="post-date" datetime="{{date timeago="true"}}">{{date timeago="true"}}</time>
+        <div class="page-header-inner">
+          <h1>{{title}}</h1>
+          {{author}}
+          {{tags prefix=" on "}}
+          <time class="post-date" datetime="{{date timeago="true"}}">{{date timeago="true"}}</time>
+        </div>
       </div>
     </div>
   </div>
   <div class="row">
     <div class="col-md-12">
-      {{content}}
+      <div class="post-loop-inner">
+        {{content}}
+      </div>
     </div>
   </div>
 {{/post}}
