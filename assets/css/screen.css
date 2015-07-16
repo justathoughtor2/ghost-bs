@@ -30,12 +30,3 @@ body {
   margin-left: 4%;
   margin-right: 4%;
 }
-
-.page-header, .post-loop {
-  border-color: rgba(40, 35, 42, 0.5);
-  border-size: 5px;
-  border-style: hidden;
-  border-radius: 10px;
-  margin: 4%;
-  padding: 10px;
-}
