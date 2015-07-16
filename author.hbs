@@ -3,11 +3,13 @@
 {{#author}}
   <div class="row">
     <div class="col-md-12">
-      <div class="page-header" id="blog-header">
-        <h1>{{name}}</h1>
-        <h2>{{bio}}</h2>
+      <div class="page-header">
+        <div class="page-header-inner">
+          <h1>{{name}}</h1>
+          <h2>{{bio}}</h2>
+        </div>
         {{#if cover}}
-          {{author-header-bg cover}}
+          {{blog-header-bg cover}}
         {{/if}}
       </div>
     </div>

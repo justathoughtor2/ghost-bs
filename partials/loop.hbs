@@ -2,41 +2,48 @@
   {{#foreach posts}}
     {{#if featured}}
       <div class="col-md-12 post-loop">
-        <div class="row">
-          <div class="col-md-12">
-            <h2><a href="{{url}}">{{title}}</a></h2>
+        <div class="post-loop-inner">
+          <div class="row">
+            <div class="col-md-12">
+              <h2><a href="{{url}}">{{title}}</a></h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              {{content}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              {{author}}
+              {{tags prefix=" on "}}
+              <time class="post-date" datetime="{{date timeago="true"}}">{{date timeago="true"}}</time>
+            </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-12">
-            {{content}}
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            {{author}}
-            {{tags prefix=" on "}}
-            <time class="post-date" datetime="{{date timeago="true"}}">{{date timeago="true"}}</time>
-          </div>
-        </div>
+        {{#if image}}
+          {{post-loop-bg image @index}}
+        {{/if}}
       </div>
     {{else}}
       <div class="col-md-6 col-sm-12 post-loop">
-        <div class="row">
-          <div class="col-md-12">
-            <h2><a href="{{url}}">{{title}}</a></h2>
+        <div class="post-loop-inner">
+          <div class="row">
+            <div class="col-md-12">
+              <h2><a href="{{url}}">{{title}}</a></h2>
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            {{excerpt words="24"}}
+          <div class="row">
+            <div class="col-md-12">
+              {{excerpt words="24"}}
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            {{author}}
-            {{tags prefix=" on "}}
-            <time class="post-date" datetime="{{date timeago="true"}}">{{date timeago="true"}}</time>
+          <div class="row">
+            <div class="col-md-12">
+              {{author}}
+              {{tags prefix=" on "}}
+              <time class="post-date" datetime="{{date timeago="true"}}">{{date timeago="true"}}</time>
+            </div>
           </div>
         </div>
         {{#if image}}
