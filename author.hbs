@@ -1,21 +1,14 @@
 {{!< default}}
 
-{{#if author.cover}}
-  {{blog-header-bg author.cover}}
-{{/if}}
-
 {{#author}}
   <div class="row">
     <div class="col-md-12">
       <div class="page-header" id="blog-header">
-        <h1>
-          {{#if image}}
-            <img src="{{image}}" alt="{{name}}" />
-            <br />
-          {{/if}}
-          {{name}}
-        </h1>
+        <h1>{{name}}</h1>
         <h2>{{bio}}</h2>
+        {{#if cover}}
+          {{author-header-bg cover}}
+        {{/if}}
       </div>
     </div>
   </div>
