@@ -4,18 +4,15 @@
   <div class="row">
     <div class="col-md-12">
       <h1>{{title}}</h1>
-      <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time> 
+      {{#if author.image}}<img src="{{author.image}}" alt="Author image" />{{/if}}
+      <a href="{{author.url}}">{{author.name}}</a>
       {{tags prefix=" on "}}
+      <time class="post-date" datetime="{{date timeago="true"}}">{{date timeago="true"}}</time>
     </div>
   </div>
   <div class="row">
     <div class="col-md-12">
       {{content}}
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12">
-      {{author}}
     </div>
   </div>
 {{/post}}
