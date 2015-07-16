@@ -3,14 +3,15 @@
 {{#post}}
   <div class="row">
     <div class="col-md-12">
-      <div class="page-header" id="blog-header">
+      {{#if cover}}
+        <div class="page-header" style="background-image: {{image}}">
+      {{else}}
+        <div class="page-header">
+      {{/if}}
         <h1>{{title}}</h1>
         {{author}}
         {{tags prefix=" on "}}
         <time class="post-date" datetime="{{date timeago="true"}}">{{date timeago="true"}}</time>
-        {{#if image}}
-          {{blog-header-bg image}}
-        {{/if}}
       </div>
     </div>
   </div>
